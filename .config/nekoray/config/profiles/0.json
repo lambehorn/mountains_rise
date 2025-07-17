@@ -1,0 +1,29 @@
+{
+    "bean": {
+        "_v": 0,
+        "addr": "31.59.120.104",
+        "name": "ivan",
+        "pass": "70a61e83-39ba-4fa7-9a0f-cb4503919ff8",
+        "port": 1939,
+        "stream": {
+            "ed_len": 0,
+            "insecure": false,
+            "mux_s": 0,
+            "net": "tcp",
+            "pbk": "55ZDdLkn-LqPYcdjKL349EfDVGPdm37ZL78Mb9N9Ij8",
+            "sec": "tls",
+            "sid": "cbd040faa714",
+            "sni": "cloudflare.com",
+            "spx": "/",
+            "utls": "chrome"
+        }
+    },
+    "gid": 0,
+    "id": 0,
+    "traffic": {
+        "dl": 0,
+        "ul": 0
+    },
+    "type": "vless",
+    "yc": 0
+}
