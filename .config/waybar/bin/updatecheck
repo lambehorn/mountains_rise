@@ -4,14 +4,6 @@ check() {
   command -v "$1" 1>/dev/null
 }
 
-notify() {
-  check notify-send && {
-    notify-send -a "UpdateCheck Waybar" "$@"
-    return
-  }
-  echo "$@"
-}
-
 stringToLen() {
   STRING="$1"
   LEN="$2"
@@ -21,22 +13,8 @@ stringToLen() {
     printf "%-20s" "$STRING"
   fi
 }
-check aur || {
-  notify "Ensure aurutils is installed"
-  cat <<EOF
-  {"text":"ERR","tooltip":"aurutils or pacman-contrib is not installed"}
-EOF
-  exit 1
-}
 
 
-check checkupdates || {
-  notify "Ensure pacman-contrib is installed"
-  cat <<EOF
-  {"text":"ERR","tooltip":"pacman-contrib or aurutils is not installed"}
-EOF
-  exit 1
-}
 IFS=$'\n'$'\r'
 
 killall -q checkupdates
